@@ -7,5 +7,6 @@ class Product
   validates :description, :name, presence: true
   validates :price_in_cents, numericality: {only_integer: true}
 
-  embeds_many :comments
+  embeds_many :reviews, dependent: :delete
+  belongs_to :category
 end
