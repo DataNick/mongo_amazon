@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
 
-  get 'sessions/create'
-
-  get 'sessions/destroy'
 
   devise_for :users
   devise_scope :user do
@@ -16,6 +12,8 @@ Rails.application.routes.draw do
       root 'devise/registrations#new', as: :unauthenticated_root
     end
   end
+
+  resources :sessions, only: [:new, :create, :destroy]
 
   resources :products do
     resources :reviews
