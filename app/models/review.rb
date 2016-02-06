@@ -3,4 +3,5 @@ class Review
   field :comment, type: String
 
   embedded_in :product, inverse_of: :reviews
+  belongs_to :review
 end
