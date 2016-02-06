@@ -15,8 +15,8 @@
   <%= @product.price_in_cents %>
 </p>
 
-
-  <h3>Comments</h3>
+<% if @product.reviews.size > 0 %>
+  <h2>Reviews</h2>
 
   <% @product.reviews.order(created_at: :desc).each do |review| %>
     <div class = "review">
@@ -29,9 +29,9 @@
     </p>
     </div>
   <% end %>
+<% end %>
 
-
-<h2>New Comment</h2>
+<h3>New Review</h3>
 
 <%= form_for [@product, Review.new] do |f| %>
   <div class="field">
