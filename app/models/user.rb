@@ -6,6 +6,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
+  field :name,  type: String
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
@@ -22,6 +23,9 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
+
+  has_many :reviews
+  has_many :products
 
   ## Confirmable
   # field :confirmation_token,   type: String
