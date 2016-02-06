@@ -8,5 +8,5 @@ class Product
   validates :price_in_cents, numericality: {only_integer: true}
 
   embeds_many :reviews
-  belongs_to :category
+  embeds_one :category
 end
