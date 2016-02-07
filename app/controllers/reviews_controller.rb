@@ -3,7 +3,14 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @product.reviews.create!(review_params)
+    @review.user = current_user
     redirect_to @product, notice: "Review was created."
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to @product, notice: 'Review was deleted'
   end
 
   private
