@@ -4,6 +4,6 @@ class Review
 
   validates :comment, :presence => true
 
-  embedded_in :product, inverse_of: :reviews
   belongs_to :user
+  belongs_to :product
 end
