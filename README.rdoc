@@ -1,30 +1,21 @@
-== README
+= README for Rails/Mongo project
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.1.2
 
 * System dependencies
 
-* Configuration
+* Configuration: mongoid.yml
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database creation: NoSQL MongoDB (Using Mongoid Gem)
 
 
-###Learning outcomes
-Wanted to model embedded docs and referenced docs
-Figure out how to model ORM on a ODM
-Using a NoSQL database
+
+==Learning outcomes
+1. Wanted to model embedded docs and referenced docs
+2. Figure out how to model ORM on a ODM
+3. Using a NoSQL database
