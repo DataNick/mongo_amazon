@@ -1,0 +1,14 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'bin/*'
+    - 'config/**/*'
+    - 'coverage/**/*'
+    - 'log/*'
+    - 'tmp/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
