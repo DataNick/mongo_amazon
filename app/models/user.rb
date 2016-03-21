@@ -26,7 +26,9 @@ class User
 
   has_many :reviews
   #has_many :products, through: :reviews
-
+  def products
+    Product.in(id: reviews.pluck(:product_id))
+  end
 
 
   ## Confirmable
