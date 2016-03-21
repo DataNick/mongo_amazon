@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
-
+  resources :categories, only: [:index, :new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :products do
