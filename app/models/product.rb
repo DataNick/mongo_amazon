@@ -9,6 +9,7 @@ class Product
   #has_many users, through: :reviews
   has_many :reviews
   embeds_one :category
+  # embeds_many :reviews
 
   def users
     User.in(id: reviews.pluck(:user_id))
