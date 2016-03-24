@@ -14,6 +14,7 @@ gem 'devise', '~> 3.5', '>= 3.5.5'
 gem 'mongoid', '~> 5.1'
 gem 'bson', '~> 3.0'
 gem 'bson_ext'
+gem 'puma', '~> 3.1'
 
 group :development, :test do
   gem 'byebug'
