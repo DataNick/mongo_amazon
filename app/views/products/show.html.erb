@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-  <%= current_user.reviews.each do |review| %>
-    <%= review.comment %>
-  <% end %>
-
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -21,7 +17,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @product.users.field_list %>
+  <%= @product.users %>
 </p>
 
 <% if @product.reviews.size > 0 %>
