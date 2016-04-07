@@ -23,6 +23,11 @@
     <%= f.label :price_in_cents %><br>
     <%= f.number_field :price_in_cents %>
   </div>
+  <%= f.fields_for :category do |category| %>
+  <div class="field">
+    <%= render "category_field", :f => category %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
