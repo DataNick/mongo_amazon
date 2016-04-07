@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @product.reviews.build(review_params)
-    @review.user = current_user
+    @review.user_id = current_user.id
     respond_to do |format|
       if @review.save
         format.html do
