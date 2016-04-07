@@ -12,11 +12,11 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
-  resources :categories, only: [:index, :new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :products do
     resources :reviews
+    resources :categories, only: [:index, :new, :create, :show]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
