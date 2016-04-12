@@ -15,7 +15,9 @@ gem 'mongoid', '~> 5.1'
 gem 'bson', '~> 3.0'
 gem 'bson_ext'
 gem 'puma', '~> 3.1'
-
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'pry-rails', :group => :development
+gem 'awesome_print', '~> 1.6', '>= 1.6.1'
 group :development, :test do
   gem 'byebug'
 
