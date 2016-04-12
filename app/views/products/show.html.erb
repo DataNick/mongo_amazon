@@ -15,11 +15,12 @@
   <%= @product.price_in_cents %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @product.users %>
-</p>
+<%= image_tag @product.avatar.url %>
 
+<% if @product.category %>
+  <strong>Category:</strong>
+  <%= @product.category.name %>
+<% end %>
 <% if @product.reviews.size > 0 %>
   <h2>Reviews</h2>
 

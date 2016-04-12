@@ -4,7 +4,7 @@
   <%= link_to 'View all categories', categories_url %>
 </nav>
 
-<%= form_for @category, html: {class: 'general'} do |f| %>
+<%= form_for ([@product, @category]) do |f| %>
   <div class="field">
     <%= f.label :name, 'Category name: ' %>
     <%= f.text_field :name %>
